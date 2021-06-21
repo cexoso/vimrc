@@ -121,3 +121,6 @@
 [submodule "pack/vendor/start/vim-jsx-typescript"]
 	path = pack/vendor/start/vim-jsx-typescript
 	url = git@github.com:peitalin/vim-jsx-typescript.git
+[submodule "pack/vendor/start/vim-repeat"]
+	path = pack/vendor/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
