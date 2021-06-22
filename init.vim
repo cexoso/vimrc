@@ -14,6 +14,7 @@ set clipboard=unnamed
 
 set foldmethod=indent
 set foldlevel=99
+set vb t_vb=
 
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
