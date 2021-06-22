@@ -1,6 +1,7 @@
 set number
 syntax on
 set expandtab
+set autoindent
 set ar
 let mapleader="\<space>"
 set tabstop=2
