@@ -12,6 +12,9 @@ set backspace=2
 set ignorecase
 set clipboard=unnamed
 
+set foldmethod=indent
+set foldlevel=99
+
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
