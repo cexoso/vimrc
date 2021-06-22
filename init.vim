@@ -9,7 +9,7 @@ set softtabstop=2
 set shiftwidth=2
 set noswapfile
 set backspace=2
-set ignorecase smartcase
+set ignorecase
 set clipboard=unnamed
 
 nnoremap <leader>ev :e $MYVIMRC<CR>
