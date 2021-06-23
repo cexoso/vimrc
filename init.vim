@@ -161,4 +161,4 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> gh :call <SID>show_documentation()<CR>
