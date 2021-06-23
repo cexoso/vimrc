@@ -162,3 +162,6 @@ function! s:show_documentation()
   endif
 endfunction
 nnoremap <silent> gh :call <SID>show_documentation()<CR>
+
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
