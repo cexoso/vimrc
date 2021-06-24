@@ -106,9 +106,6 @@
 [submodule "pack/vendor/start/coc"]
 	path = pack/vendor/start/coc
 	url = git@github.com:neoclide/coc.nvim.git
-[submodule "pack/vendor/start/vim-commentary"]
-	path = pack/vendor/start/vim-commentary
-	url = git@github.com:tpope/vim-commentary.git
 [submodule "pack/vendor/start/vim-airline"]
 	path = pack/vendor/start/vim-airline
 	url = git@github.com:vim-airline/vim-airline.git
@@ -124,3 +121,6 @@
 [submodule "pack/vendor/start/vim-repeat"]
 	path = pack/vendor/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
+[submodule "pack/vendor/start/tcomment_vim"]
+	path = pack/vendor/start/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim.git
