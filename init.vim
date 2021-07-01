@@ -123,6 +123,11 @@ command! -bang -nargs=* GGrep
   \   'git grep -i -w --line-number -- '.shellescape(<q-args>).' :!test', 0,
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
+inoremap <silent><expr> <space> UltiSnips#CanExpandSnippet() ==# 0 ? "\<space>" : "\<C-R>=UltiSnips#ExpandSnippet()<cr>"
+let g:UltiSnipsExpandTrigger="<S-space>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :

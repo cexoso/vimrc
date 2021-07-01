@@ -124,3 +124,6 @@
 [submodule "pack/vendor/start/tcomment_vim"]
 	path = pack/vendor/start/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "pack/vendor/start/ultisnips"]
+	path = pack/vendor/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
