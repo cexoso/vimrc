@@ -54,6 +54,7 @@ nnoremap <leader>ww <Esc>:w<CR>
 " 
 nnoremap <C-p> <Esc>:GFiles<CR>
 nnoremap <leader><C-p> <Esc>:GFiles?<CR>
+nnoremap <leader>m <Esc>:FZFMru<CR>
 " 
 nmap <leader>rn <Plug>(coc-rename)
 " 

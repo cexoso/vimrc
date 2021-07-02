@@ -127,3 +127,9 @@
 [submodule "pack/vendor/start/ultisnips"]
 	path = pack/vendor/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "pack/vendor/start/fzf-mru"]
+	path = pack/vendor/start/fzf-mru
+	url = https://github.com/pbogut/fzf-mru.vim
+[submodule "pack/vendor/start/vim-rooter"]
+	path = pack/vendor/start/vim-rooter
+	url = https://github.com/airblade/vim-rooter
