@@ -22,11 +22,10 @@ colorscheme monokai_pro
 map! jk <Esc>
 map  gc  <Plug>Commentary
 nmap gcc <Plug>CommentaryLine
-" 
+"
 nmap     <Leader>g :Gstatus<CR>gg<c-n>
 nnoremap <Leader>d :Gdiff<CR>
-" 
-" 
+"
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
@@ -123,15 +122,23 @@ command! -bang -nargs=* GGrep
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
 inoremap <silent><expr> <space> UltiSnips#CanExpandSnippet() ==# 0 ? "\<space>" : "\<C-R>=UltiSnips#ExpandSnippet()<cr>"
-let g:UltiSnipsExpandTrigger="<S-space>"
-let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-let g:UltiSnipsJumpForwardTrigger="<Tab>"
+
+let g:UltiSnipsExpandTrigger="<Nop>"
+let g:UltiSnipsJumpBackwardTrigger="<Nop>"
+let g:UltiSnipsJumpForwardTrigger="<Nop>"
+
+let g:rooter_patterns = ['.git']
 
 inoremap <silent><expr> <TAB>
+      \ UltiSnips#CanJumpForwards() ? "\<C-O>:call UltiSnips#JumpForwards()<cr>" :
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+inoremap <expr><S-TAB>
+      \ UltiSnips#CanJumpBackwards() ? "\<C-O>:call UltiSnips#JumpBackwards()<cr>" :
+      \ pumvisible() ? "\<C-p>" : 
+      \ "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
