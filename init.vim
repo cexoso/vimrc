@@ -131,14 +131,14 @@ let g:UltiSnipsJumpForwardTrigger="<Nop>"
 let g:rooter_patterns = ['.git']
 
 inoremap <silent><expr> <TAB>
-      \ UltiSnips#CanJumpForwards() ? "\<C-O>:call UltiSnips#JumpForwards()<cr>" :
       \ pumvisible() ? "\<C-n>" :
+      \ UltiSnips#CanJumpForwards() ? "\<C-O>:call UltiSnips#JumpForwards()<cr>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 
 inoremap <expr><S-TAB>
-      \ UltiSnips#CanJumpBackwards() ? "\<C-O>:call UltiSnips#JumpBackwards()<cr>" :
       \ pumvisible() ? "\<C-p>" : 
+      \ UltiSnips#CanJumpBackwards() ? "\<C-O>:call UltiSnips#JumpBackwards()<cr>" :
       \ "\<C-h>"
 
 function! s:check_back_space() abort
