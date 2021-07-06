@@ -183,4 +183,12 @@ nnoremap <silent> gh :call <SID>show_documentation()<CR>
 
 autocmd BufWinLeave *.* mkview!
 autocmd BufWinEnter *.* silent loadview
+
+let g:airline_theme='deus'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+map <F2> :bprevious<CR>
+map <F3> :bnext<CR>
+
 helpt ALL
