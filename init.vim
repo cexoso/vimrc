@@ -161,6 +161,9 @@ xnoremap <silent> <Leader>gg       y:GGrep <C-R>"<CR>
 
 nnoremap <silent> <Leader>`        :Marks<CR>
 nnoremap <C-F> :CocCommand prettier.formatFile<CR>
+
+nnoremap <leader>pg :e ~/myvimplayground.vim<CR>
+nnoremap <C-s> :so ~/myvimplayground.vim<CR>
 " Mapping selecting mappings
 " nmap <leader><tab> <plug>(fzf-maps-n)
 " xmap <leader><tab> <plug>(fzf-maps-x)
