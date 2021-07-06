@@ -114,12 +114,12 @@ let g:fzf_colors =
 if exists('$TMUX')
   let g:fzf_layout = { 'tmux': '-p90%,60%' }
 else
-  let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+  let g:fzf_layout = { 'window': { 'width': 1, 'height': 1 } }
 endif
 
 command! -bang -nargs=* GGrep
   \ call fzf#vim#grep(
-  \   'git grep -i -w --line-number -- '.shellescape(<q-args>).' :!test', 0,
+  \   'git grep -i -w --line-number '.shellescape(<q-args>).' -- :^test', 0,
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
 inoremap <silent><expr> <space> UltiSnips#CanExpandSnippet() ==# 0 ? "\<space>" : "\<C-R>=UltiSnips#ExpandSnippet()<cr>"
@@ -150,9 +150,15 @@ endfunction
 nnoremap <silent> <Leader>C        :Colors<CR>
 nnoremap <silent> <Leader><Enter>  :Buffers<CR>
 nnoremap <silent> <Leader>L        :Lines<CR>
-nnoremap <silent> <Leader>ag       :GGrep <C-R><C-W><CR>
-nnoremap <silent> <Leader>AG       :GGrep <C-R><C-A><CR>
-xnoremap <silent> <Leader>ag       y:GGrep <C-R>"<CR>
+nnoremap <silent> <Leader>ag       :Ag <C-R><C-W><CR>
+nnoremap <silent> <Leader>AG       :Ag <C-R><C-A><CR>
+xnoremap <silent> <Leader>ag       y:Ag <C-R>"<CR>
+
+
+nnoremap <silent> <Leader>gg       :GGrep <C-R><C-W><CR>
+nnoremap <silent> <Leader>GG       :GGrep <C-R><C-A><CR>
+xnoremap <silent> <Leader>gg       y:GGrep <C-R>"<CR>
+
 nnoremap <silent> <Leader>`        :Marks<CR>
 nnoremap <C-F> :CocCommand prettier.formatFile<CR>
 " Mapping selecting mappings
