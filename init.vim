@@ -95,6 +95,8 @@ command! -nargs=? -complete=dir AF
   \   'source': 'fd --type f --hidden --follow --exclude .git --no-ignore . '.expand(<q-args>)
   \ })))
 " 
+let FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
+
 let g:fzf_colors =
 \ { 'fg':         ['fg', 'Normal'],
 \ 'bg':         ['bg', 'Normal'],
@@ -146,6 +148,18 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 " 
+
+let g:agIgnores = ['test']
+if exists('g:agIgnores')
+  let g:agIgnores = []
+endif
+
+let s:projectRoot = systemlist('git rev-parse --show-toplevel')[0]
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#grep(
+  \   'ag '.join(map(g:agIgnores, { key, value -> '--ignore '.value }), ' ').' --column --vimgrep --smart-case -w '.shellescape(<q-args>).' '.s:projectRoot, 1,
+  \   fzf#vim#with_preview({'dir': s:projectRoot, 'options': ['--layout=reverse', '--info=inline']}), <bang>0)
 " nnoremap <silent> <Leader><Leader> :Files<CR>
 nnoremap <silent> <Leader>C        :Colors<CR>
 nnoremap <silent> <Leader><Enter>  :Buffers<CR>
