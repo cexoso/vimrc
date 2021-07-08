@@ -48,7 +48,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " 
 nnoremap <leader>v :NERDTreeFind<cr>
-nnoremap <c-b> :NERDTreeToggle<cr>
+nnoremap <leader>b :NERDTreeToggle<cr>
 nnoremap <leader>ee <Esc>:e!<CR>
 nnoremap <leader>ww <Esc>:w<CR>
 " 

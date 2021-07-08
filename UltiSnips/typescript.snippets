@@ -8,6 +8,18 @@ if ($1) {
 }
 endsnippet
 
+snippet else "else {} " b
+else {
+  $1
+}
+endsnippet
+
 snippet import "import module" b
 import { $2 } from '$1';
+endsnippet
+
+snippet function "function name" b
+function $1() {
+  $2
+}
 endsnippet
