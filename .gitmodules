@@ -133,3 +133,6 @@
 [submodule "pack/vendor/start/vim-rooter"]
 	path = pack/vendor/start/vim-rooter
 	url = https://github.com/airblade/vim-rooter
+[submodule "pack/vendor/start/git-blame"]
+	path = pack/vendor/start/git-blame
+	url = https://github.com/zivyangll/git-blame.vim.git

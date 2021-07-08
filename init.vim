@@ -167,7 +167,7 @@ nnoremap <silent> <Leader>L        :Lines<CR>
 nnoremap <silent> <Leader>ag       :Ag <C-R><C-W><CR>
 nnoremap <silent> <Leader>AG       :Ag <C-R><C-A><CR>
 xnoremap <silent> <Leader>ag       y:Ag <C-R>"<CR>
-
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 nnoremap <silent> <Leader>gg       :GGrep <C-R><C-W><CR>
 nnoremap <silent> <Leader>GG       :GGrep <C-R><C-A><CR>
